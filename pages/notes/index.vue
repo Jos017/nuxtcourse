@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { CardNoteProps } from '~/components/Card/Note.vue';
 
+const foo = useFoo();
 
 const randomNumber = (): number => {
   return Math.floor(Math.random() * 100) + 1
@@ -15,7 +16,7 @@ const addNote = (value: string) => {
 </script>
 
 <template>
-  <h1>Notes Page</h1>
+  <h1>Notes Page {{ foo }}</h1>
   <InputNewNote ref="inputNewNote" />
   <button @click="addNote(inputNewNote?.$el.value)">Add new note</button>
   <div class="notes-container">
