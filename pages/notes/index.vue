@@ -1,15 +1,35 @@
 <script lang="ts" setup>
+import type { CardNoteProps } from '~/components/Card/Note.vue';
+
+
 const randomNumber = (): number => {
   return Math.floor(Math.random() * 100) + 1
 }
-const notes: string[] = ['note 1', 'note 2', 'note 3']
+const notes = ref<CardNoteProps[]>([])
+const inputNewNote = useTemplateRef('inputNewNote');
+
+const addNote = (value: string) => {
+  if (value == '' || value == undefined) return
+  notes.value.push({ title: 'Note ' + (notes.value.length + 1), content: value });
+}
 </script>
 
 <template>
   <h1>Notes Page</h1>
-  <ul>
-    <li v-for="note in notes">
-      <NuxtLink :to="'/notes/' + randomNumber()">{{ note }}</NuxtLink>
-    </li>
-  </ul>
+  <InputNewNote ref="inputNewNote" />
+  <button @click="addNote(inputNewNote?.$el.value)">Add new note</button>
+  <div class="notes-container">
+    <NuxtLink v-for="note, index in notes" :to="'/notes/' + randomNumber()" :key="index">
+      <CardNote :title="note.title" :content="note.content" />
+    </NuxtLink>
+  </div>
 </template>
+
+<style scoped>
+.notes-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+</style>
