@@ -1,4 +1,9 @@
 <script setup lang="ts">
+definePageMeta({    
+  layout: 'custom',
+  middleware: [(to, from) => console.log('in page middleware'), 'name'],
+})
+
 const updateLayout = () => {
   setPageLayout('custom-second')
 }
