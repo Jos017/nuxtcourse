@@ -6,7 +6,8 @@ const menu: MenuItem[] = [
   { label: 'About', path: '/about' },
   { label: 'Notes', path: '/notes' },
   { label: 'Composition vs Options', path: '/composition-vs-options' },
-  { label: 'Data Binding', path: '/data-binding-and-directives' }
+  { label: 'Data Binding', path: '/data-binding-and-directives' },
+  { label: 'Methods and Computed', path: '/methods-and-computed-properties' }
 ]
 
 </script>
