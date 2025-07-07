@@ -4,7 +4,8 @@ interface MenuItem { label: string, path: string }
 const menu: MenuItem[] = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
-  { label: 'Notes', path: '/notes' }
+  { label: 'Notes', path: '/notes' },
+  { label: 'Composition vs Options', path: '/composition-vs-options' },
 ]
 
 </script>
