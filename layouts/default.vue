@@ -8,7 +8,8 @@ const menu: MenuItem[] = [
   { label: 'Composition vs Options', path: '/composition-vs-options' },
   { label: 'Data Binding', path: '/data-binding-and-directives' },
   { label: 'Methods and Computed', path: '/methods-and-computed-properties' },
-  { label: 'Conditional and List Rendering', path: '/conditional-rendering' }
+  { label: 'Conditional and List Rendering', path: '/conditional-rendering' },
+  { label: 'Lifecycle and Hooks', path: '/lifecycle-and-hooks' }
 ]
 
 </script>
