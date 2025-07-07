@@ -6,6 +6,7 @@ const menu: MenuItem[] = [
   { label: 'About', path: '/about' },
   { label: 'Notes', path: '/notes' },
   { label: 'Composition vs Options', path: '/composition-vs-options' },
+  { label: 'Data Binding', path: '/data-binding-and-directives' }
 ]
 
 </script>
