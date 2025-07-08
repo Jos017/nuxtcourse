@@ -15,6 +15,7 @@ const menu: MenuItem[] = [
   { label: 'Teleport components', path: '/teleport-components' },
   { label: 'Transition components', path: '/transition-components' },
   { label: 'Typescript in Nuxt', path: '/typescript-in-nuxt' },
+  { label: 'Pinia state management', path: '/pinia-state-management' }
 ]
 
 </script>
