@@ -35,9 +35,14 @@ const menu: MenuItem[] = [
   margin: 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 0 auto;
   max-width: 1200px;
   list-style: none;
+}
+
+.menu__item {
+  width: max-content;
 }
 </style>
