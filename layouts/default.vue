@@ -12,6 +12,7 @@ const menu: MenuItem[] = [
   { label: 'Lifecycle and Hooks', path: '/lifecycle-and-hooks' },
   { label: 'Props and custom events', path: '/props-and-custom-events' },
   { label: 'Slots and scoped slots', path: '/slots-and-scoped-slots' },
+  { label: 'Teleport components', path: '/teleport-components' },
 ]
 
 </script>
