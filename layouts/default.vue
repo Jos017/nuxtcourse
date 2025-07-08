@@ -13,6 +13,7 @@ const menu: MenuItem[] = [
   { label: 'Props and custom events', path: '/props-and-custom-events' },
   { label: 'Slots and scoped slots', path: '/slots-and-scoped-slots' },
   { label: 'Teleport components', path: '/teleport-components' },
+  { label: 'Transition components', path: '/transition-components' },
 ]
 
 </script>
