@@ -10,7 +10,8 @@ const menu: MenuItem[] = [
   { label: 'Methods and Computed', path: '/methods-and-computed-properties' },
   { label: 'Conditional and List Rendering', path: '/conditional-rendering' },
   { label: 'Lifecycle and Hooks', path: '/lifecycle-and-hooks' },
-  { label: 'Props and custom events', path: '/props-and-custom-events' }
+  { label: 'Props and custom events', path: '/props-and-custom-events' },
+  { label: 'Slots and scoped slots', path: '/slots-and-scoped-slots' },
 ]
 
 </script>
