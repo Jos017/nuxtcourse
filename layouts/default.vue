@@ -14,6 +14,7 @@ const menu: MenuItem[] = [
   { label: 'Slots and scoped slots', path: '/slots-and-scoped-slots' },
   { label: 'Teleport components', path: '/teleport-components' },
   { label: 'Transition components', path: '/transition-components' },
+  { label: 'Typescript in Nuxt', path: '/typescript-in-nuxt' },
 ]
 
 </script>
