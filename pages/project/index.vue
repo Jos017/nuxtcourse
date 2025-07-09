@@ -5,8 +5,10 @@ const { todos } = storeToRefs(todoStore);
 </script>
 
 <template>
-  <Banner />
-  <TodoList :todos="todos" />
+  <div>
+    <Banner />
+    <TodoList :todos="todos" />
+  </div>
 </template>
 
 

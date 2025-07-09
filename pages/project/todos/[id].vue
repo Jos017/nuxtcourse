@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-definePageMeta({ layout: 'project' })
+definePageMeta({ layout: 'project', pageTransition: { name: 'rotate', mode: 'out-in' } })
 const route = useRoute();
 const todoStore = useTodoStore();
 const todoId = Number(route.params.id);
@@ -12,7 +12,6 @@ const toggleCompletedStatus = () => {
 
 <template>
   <div>
-
     <h1>{{ todo?.title }}</h1>
     <p>{{ todo?.description }}</p>
 

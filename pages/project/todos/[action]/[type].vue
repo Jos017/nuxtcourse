@@ -28,7 +28,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <TodoForm :todo="todo" :is-edit="isEdit" />
+  <div>
+    <TodoForm :todo="todo" :is-edit="isEdit" />
+  </div>
 </template>
 
 <style></style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-definePageMeta({    
+definePageMeta({
   layout: 'custom',
   middleware: [(to, from) => console.log('in page middleware'), 'name'],
 })
@@ -10,6 +10,8 @@ const updateLayout = () => {
 </script>
 
 <template>
-  <h1>About Page</h1>
-  <button @click="updateLayout()">Update Layout</button>
+  <div>
+    <h1>About Page</h1>
+    <button @click="updateLayout()">Update Layout</button>
+  </div>
 </template>

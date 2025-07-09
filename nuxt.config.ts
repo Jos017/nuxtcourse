@@ -4,12 +4,12 @@ import type { NuxtPage } from 'nuxt/schema';
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'My Nuxt App',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'My Nuxt App' },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },

@@ -16,13 +16,15 @@ const addNote = (value: string) => {
 </script>
 
 <template>
-  <h1>Notes Page {{ foo }}</h1>
-  <InputNewNote ref="inputNewNote" />
-  <button @click="addNote(inputNewNote?.$el.value)">Add new note</button>
-  <div class="notes-container">
-    <NuxtLink v-for="note, index in notes" :to="'/notes/' + randomNumber()" :key="index">
-      <CardNote :title="note.title" :content="note.content" />
-    </NuxtLink>
+  <div>
+    <h1>Notes Page {{ foo }}</h1>
+    <InputNewNote ref="inputNewNote" />
+    <button @click="addNote(inputNewNote?.$el.value)">Add new note</button>
+    <div class="notes-container">
+      <NuxtLink v-for="note, index in notes" :to="'/notes/' + randomNumber()" :key="index">
+        <CardNote :title="note.title" :content="note.content" />
+      </NuxtLink>
+    </div>
   </div>
 </template>
 

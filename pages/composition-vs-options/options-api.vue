@@ -19,6 +19,8 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
-  <p>{{ hello() }}</p>
+  <div>
+    <h1>{{ title }}</h1>
+    <p>{{ hello() }}</p>
+  </div>
 </template>
