@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
+  css: ['~/assets/css/main.css'],
   features: { devLogs: false },
   // WE CAN CONFIG IF THE FOLDER FOR COMPONENTS USES PREFIX
   // components: [
