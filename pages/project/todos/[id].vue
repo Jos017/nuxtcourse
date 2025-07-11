@@ -2,8 +2,10 @@
 definePageMeta({ layout: 'project', pageTransition: { name: 'rotate', mode: 'out-in' } })
 const route = useRoute();
 const todoStore = useTodoStore();
+const { todos } = storeToRefs(todoStore);
 const todoId = Number(route.params.id);
-const todo = computed(() => todoStore.getTodoById(todoId));
+
+const todo = computed(() => todos.value.find((todo) => todo.id === todoId));
 
 const toggleCompletedStatus = () => {
   todoStore.toggleCompletedStatus(todoId);

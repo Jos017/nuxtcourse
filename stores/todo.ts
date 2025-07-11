@@ -1,5 +1,3 @@
-import SecureLS from 'secure-ls';
-
 export interface Todo {
   id: number;
   title: string;
@@ -10,15 +8,26 @@ export interface Todo {
 }
 
 export const useTodoStore = defineStore('todo', {
-  state: () => ({
-    todos: [] as Todo[],
+  state: (): { todos: Todo[] } => ({
+    todos: [],
   }),
-  getters: {
-    getTodoById: (state) => (id: number) => {
-      return state.todos.find((todo) => todo.id === id);
-    },
-  },
   actions: {
+    async getAllTodos() {
+      try {
+        const response = await fetch('/api/todos');
+        const res = await response.json();
+        console.log(res);
+
+        if (response) {
+          this.todos = res.value;
+        }
+        if (!response) {
+          throw new Error('Failed to fetch todos');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    },
     addTodo(todo: Todo) {
       this.todos.push(todo);
     },
@@ -39,22 +48,6 @@ export const useTodoStore = defineStore('todo', {
       if (index !== -1) {
         this.todos[index].isCompleted = !this.todos[index].isCompleted;
       }
-    },
-  },
-  persist: {
-    storage: {
-      getItem: (key) =>
-        new SecureLS({
-          isCompression: false,
-          encodingType: 'AES',
-          encryptionSecret: '@Sdl#sd1234d,.',
-        }).get(key),
-      setItem: (key, value) =>
-        new SecureLS({
-          isCompression: false,
-          encodingType: 'AES',
-          encryptionSecret: '@Sdl#sd1234d,.',
-        }).set(key, value),
     },
   },
 });
